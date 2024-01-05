@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" > 
+
+
+
+<link name="arm_base_link">
+
+    <!-- add visual -->
+    <visual>
+        <origin xyz="0.0 0.0 0.01" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <box size="0.1 0.1 0.02"/>
+        </geometry>
+          <material name="orange" />
+    </visual>
+
+    <!-- add inertia -->
+    <xacro:box_inertia m="0.5" l="0.02" w="0.1" h="0.1" xyz="0 0 0.01" rpy="0 0 0" />
+
+
+
+    <!-- add collision -->
+    <collision>
+        <origin xyz="0.0 0.0 0.01" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <box size="0.1 0.1 0.02"/>
+        </geometry>
+    </collision>
+</link>
+
+
+
+<link name="forearm_link">
+
+    <!-- add visual -->
+    <visual>
+        <origin xyz="0.0 0.0 0.15" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <cylinder radius="0.02" length="0.3"/>
+        </geometry>
+          <material name="yellow" />
+    </visual>
+
+    <!-- add inertia -->
+    <xacro:cylinder_inertia m="0.3" r="0.02" h="0.3" xyz="0 0 0.15" rpy="0 0 0" />
+
+
+
+    <!-- add collision -->
+    <collision>
+        <origin xyz="0.0 0.0 0.15" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <cylinder radius="0.02" length="0.3"/>
+        </geometry>
+    </collision>
+</link>
+
+<link name="hand_link">
+
+    <!-- add visual -->
+    <visual>
+        <origin xyz="0.0 0.0 0.15" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <cylinder radius="0.02" length="0.3"/>
+        </geometry>
+          <material name="orange" />
+    </visual>
+
+    <!-- add inertia -->
+    <xacro:cylinder_inertia m="0.3" r="0.02" h="0.3" xyz="0 0 0.15" rpy="0 0 0" />
+
+
+
+    <!-- add collision -->
+    <collision>
+        <origin xyz="0.0 0.0 0.15" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <cylinder radius="0.02" length="0.3"/>
+        </geometry>
+    </collision>
+</link>
+
+
+
+<joint name="base_arm_base_joint" type="fixed">
+
+    <origin xyz="${base_length/3} 0 ${base_height}" rpy="0.0 0.0 0.0"/>
+    <parent link="base_link" />
+    <child link="arm_base_link"/>
+
+</joint>
+
+
+<joint name="arm_base_forearm_joint" type="revolute">
+    <origin xyz="0.0 0.0 0.02" rpy="0.0 0.0 0.0"/>
+    <parent link="arm_base_link"/>
+    <child link="forearm_link"/>
+    <axis xyz="0.0 1 0.0"/>
+    <limit lower="0.0" upper="${pi/2}" effort="100" velocity="100"/>
+    <dynamics friction="0.05" damping="0.1" />
+</joint>
+
+
+
+<joint name="forearm_hand_joint" type="revolute">
+    <origin xyz="0.0 0.0 0.3" rpy="0.0 0.0 0.0"/>
+    <parent link="forearm_link"/>
+    <child link="hand_link"/>
+    <axis xyz="0.0 1 0.0"/>
+    <limit lower="0.0" upper="${pi/2}" effort="100" velocity="100"/>
+    <dynamics friction="0.05" damping="0.1" />
+
+</joint>
+
+
+
+
+
+<gazebo reference= "arm_base_link" >
+    <material> Gazebo/Orange </material>
+</gazebo>
+
+<gazebo reference= "forearm_link" >
+    <material> Gazebo/Yellow </material>
+</gazebo>
+
+<gazebo reference= "hand_link" >
+    <material> Gazebo/Orange </material>
+</gazebo>
+
+<gazebo>
+    <plugin name="joint_state_publisher"
+        filename="libgazebo_ros_joint_state_publisher.so">
+
+ 
+
+      <!-- Update rate in Hertz -->
+      <update_rate>10</update_rate>
+
+      <!-- Name of joints in the model whose states will be published. -->
+      <joint_name>arm_base_forearm_joint</joint_name>
+      <joint_name>forearm_hand_joint</joint_name>
+
+
+    </plugin>
+
+</gazebo>
+
+<gazebo>
+    <plugin name="joint_pose_trajectory"
+        filename="libgazebo_ros_joint_pose_trajectory.so">
+
+
+
+
+      <!-- Update rate in Hz -->
+      <update_rate>2</update_rate>
+    
+
+
+    </plugin>
+
+</gazebo>
+
+</robot>
+
+
+
+

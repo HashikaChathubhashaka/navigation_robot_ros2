@@ -1,0 +1,9 @@
+/home/hashika/ros_ws/build/my_robot_bringup/CMakeFiles/uninstall.dir
+/home/hashika/ros_ws/build/my_robot_bringup/CMakeFiles/my_robot_bringup_uninstall.dir
+/home/hashika/ros_ws/build/my_robot_bringup/CMakeFiles/test.dir
+/home/hashika/ros_ws/build/my_robot_bringup/CMakeFiles/edit_cache.dir
+/home/hashika/ros_ws/build/my_robot_bringup/CMakeFiles/rebuild_cache.dir
+/home/hashika/ros_ws/build/my_robot_bringup/CMakeFiles/list_install_components.dir
+/home/hashika/ros_ws/build/my_robot_bringup/CMakeFiles/install.dir
+/home/hashika/ros_ws/build/my_robot_bringup/CMakeFiles/install/local.dir
+/home/hashika/ros_ws/build/my_robot_bringup/CMakeFiles/install/strip.dir

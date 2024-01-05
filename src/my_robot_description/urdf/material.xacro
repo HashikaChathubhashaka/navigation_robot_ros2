@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" > 
+
+    <!-- making material to change the color of links   --> 
+    <material name="green">
+        <!-- a= transperancy , values are between 0 and 1  --> 
+        <color rgba="0 0.5 0 1" />
+    </material>
+
+    <material name="blue">
+        <color rgba="0 0 0.5 1" />
+    </material>
+
+    <material name="red">
+        <color rgba="0.4 0 0 1" />
+    </material>
+
+    <material name="gray">
+        <color rgba="0.5 0.5 0.5 1" />
+    </material>
+
+
+    <material name ="orange">
+        <color rgba="1 0.5 0 1" />
+    </material>
+
+
+    <material name ="yellow">
+        <color rgba="1 1 0 1" />
+    </material>
+
+</robot>

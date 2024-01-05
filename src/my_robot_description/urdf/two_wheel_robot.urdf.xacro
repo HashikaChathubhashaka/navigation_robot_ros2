@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+
+
+<robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro" >   <!--  for any URDF we need to make this - name of our robot   --> 
+
+    <xacro:include filename= "material.xacro" /> 
+
+    <xacro:include filename="inertia.xacro" /> 
+
+
+
+
+    <xacro:include filename = "mobile_base.xacro" />
+    
+    <xacro:include filename = "mobile_base_gazebo.xacro"/>
+
+        <xacro:include filename = "lider.xacro" />
+    
+ 
+
+
+   
+
+
+
+
+
+<!--  in URDF its use metric systerm (m(meter) to measure distance)  --> 
+
+<!-- making custom variables (xacro propertices)   -->
+
+
+
+</robot>

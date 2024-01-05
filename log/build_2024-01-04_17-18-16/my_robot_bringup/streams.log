@@ -1,0 +1,36 @@
+[0.064s] Invoking command in '/home/hashika/ros_ws/build/my_robot_bringup': CMAKE_PREFIX_PATH=/home/hashika/ros_ws/install/my_robot_description:/home/hashika/ros_ws/install/my_robot_bringup:/opt/ros/humble /usr/bin/cmake /home/hashika/ros_ws/src/my_robot_bringup -DCMAKE_INSTALL_PREFIX=/home/hashika/ros_ws/install/my_robot_bringup
+[0.075s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.191s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.256s] -- Configuring done
+[0.260s] -- Generating done
+[0.261s] -- Build files have been written to: /home/hashika/ros_ws/build/my_robot_bringup
+[0.265s] Invoked command in '/home/hashika/ros_ws/build/my_robot_bringup' returned '0': CMAKE_PREFIX_PATH=/home/hashika/ros_ws/install/my_robot_description:/home/hashika/ros_ws/install/my_robot_bringup:/opt/ros/humble /usr/bin/cmake /home/hashika/ros_ws/src/my_robot_bringup -DCMAKE_INSTALL_PREFIX=/home/hashika/ros_ws/install/my_robot_bringup
+[0.265s] Invoking command in '/home/hashika/ros_ws/build/my_robot_bringup': CMAKE_PREFIX_PATH=/home/hashika/ros_ws/install/my_robot_description:/home/hashika/ros_ws/install/my_robot_bringup:/opt/ros/humble /usr/bin/cmake --build /home/hashika/ros_ws/build/my_robot_bringup -- -j8 -l8
+[0.297s] Invoked command in '/home/hashika/ros_ws/build/my_robot_bringup' returned '0': CMAKE_PREFIX_PATH=/home/hashika/ros_ws/install/my_robot_description:/home/hashika/ros_ws/install/my_robot_bringup:/opt/ros/humble /usr/bin/cmake --build /home/hashika/ros_ws/build/my_robot_bringup -- -j8 -l8
+[0.317s] Invoking command in '/home/hashika/ros_ws/build/my_robot_bringup': CMAKE_PREFIX_PATH=/home/hashika/ros_ws/install/my_robot_description:/home/hashika/ros_ws/install/my_robot_bringup:/opt/ros/humble /usr/bin/cmake --install /home/hashika/ros_ws/build/my_robot_bringup
+[0.323s] -- Install configuration: ""
+[0.323s] -- Execute custom install script
+[0.324s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//launch/localization_launch.py
+[0.324s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//launch/my_robot_gazebo.launch.xml
+[0.324s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//launch/navigation_launch.py
+[0.324s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//launch/online_async_launch.py
+[0.324s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//launch/slam.launch.xml
+[0.324s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//rviz/robot_config.rviz
+[0.325s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//worlds/simple room.world
+[0.325s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//worlds/test_world.world
+[0.325s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/ament_index/resource_index/package_run_dependencies/my_robot_bringup
+[0.325s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/ament_index/resource_index/parent_prefix_path/my_robot_bringup
+[0.325s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup/environment/ament_prefix_path.sh
+[0.326s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup/environment/ament_prefix_path.dsv
+[0.326s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup/environment/path.sh
+[0.326s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup/environment/path.dsv
+[0.326s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.bash
+[0.326s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.sh
+[0.327s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.zsh
+[0.327s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup/local_setup.dsv
+[0.327s] -- Symlinking: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup/package.dsv
+[0.335s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/ament_index/resource_index/packages/my_robot_bringup
+[0.335s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup/cmake/my_robot_bringupConfig.cmake
+[0.335s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup/cmake/my_robot_bringupConfig-version.cmake
+[0.336s] -- Up-to-date symlink: /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup/package.xml
+[0.337s] Invoked command in '/home/hashika/ros_ws/build/my_robot_bringup' returned '0': CMAKE_PREFIX_PATH=/home/hashika/ros_ws/install/my_robot_description:/home/hashika/ros_ws/install/my_robot_bringup:/opt/ros/humble /usr/bin/cmake --install /home/hashika/ros_ws/build/my_robot_bringup

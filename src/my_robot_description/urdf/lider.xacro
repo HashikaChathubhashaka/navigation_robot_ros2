@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" > 
+
+
+
+
+    <link name="lider_link" > 
+        <visual>
+            <geometry>
+                <cylinder radius="0.06" length="0.05"/>
+            </geometry>
+
+
+        <material name="red" />
+
+        <origin xyz="0.0 0.0 0.025" rpy="0.0 0.0 0.0"/>
+        
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.06" length="0.05"/>
+            </geometry>
+
+        </collision>
+        
+    </link>
+
+
+    <joint name="base_camara_joint" type="fixed" >
+        <parent link="base_link" />
+        <child link="lider_link" />
+        <origin xyz="${base_length/4.0} 0 ${base_height + 0.02}" rpy="0 0 0" />
+    </joint>
+
+
+
+    <gazebo reference="lider_link">
+        <material>Gazebo/Red</material>
+
+        <sensor name="laser" type="ray">
+            <pose> 0 0 0.03 0 0 0 </pose>
+            <visualize>false</visualize>
+            <update_rate>10</update_rate>
+            <ray>
+                <scan>
+                    <horizontal>
+                        <samples>360</samples>
+                        <min_angle>-3.14</min_angle>
+                        <max_angle>3.14</max_angle>
+                    </horizontal>
+                </scan>
+                <range>
+                    <min>0.3</min>
+                    <max>12</max>
+                </range>
+            </ray>
+            <plugin name="laser_controller" filename="libgazebo_ros_ray_sensor.so">
+                <ros>
+                    <argument>~/out:=scan</argument>
+                </ros>
+                <output_type>sensor_msgs/LaserScan</output_type>
+                <frame_name>lider_link</frame_name>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+
+</robot>

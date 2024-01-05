@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" > 
+
+
+    <xacro:property name="camara_length" value="0.01" />
+    <xacro:property name="camara_width" value="0.1" />
+    <xacro:property name="camara_height" value="0.05" />
+
+    <link name="camara_link" > 
+
+        <visual>
+        <geometry>
+            <box size="${camara_length} ${camara_width} ${camara_height}"/>
+        </geometry>
+
+        <material name="blue" />
+        
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.01 0.1 0.05"/>
+            </geometry>
+
+        </collision>
+        <xacro:box_inertia m="0.1" l="${camara_length}" w="${camara_width}" h="${camara_height}" xyz="0 0 0" rpy="0 0 0" />
+        
+    </link>
+
+    <link name="camera_link_optical">
+    </link>   
+    <!--use non visual exsiting link for rotating the camera (for openCV)-->
+
+
+    <joint name="base_camara_joint" type="fixed" >
+        <parent link="base_link" />
+        <child link="camara_link" />
+        <origin xyz="${(base_length + camara_length)/2.0} 0 ${base_height/2.0}" rpy="0 0 0" />
+    </joint>
+
+
+     <joint name="camera_optical_joint" type="fixed">
+    <!-- these values have to be these values otherwise the gazebo camera
+        image won't be aligned properly with the frame it is supposedly
+        originating from -->
+        <origin xyz="0 0 0" rpy="${-pi/2} 0 ${-pi/2}"/>
+        <parent link="camara_link"/>
+        <child link="camera_link_optical"/>
+    </joint>
+
+    <gazebo reference="camara_link">
+        <material> Gazebo/Gray </material>
+
+        <sensor name="camara_sensor" type="camera">
+            <pose> 0 0 0 0 0 0 </pose>
+            <visualize>true </visualize>
+            <update_rate>10 </update_rate>
+            
+            
+            <plugin name="camera_cotroller" filename="libgazebo_ros_camera.so">
+                <frame_name>camera_link_optical </frame_name>
+
+            </plugin>
+
+        </sensor>
+
+    </gazebo>
+
+
+</robot>
