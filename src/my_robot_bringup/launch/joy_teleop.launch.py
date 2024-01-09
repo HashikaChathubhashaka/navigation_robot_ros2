@@ -5,7 +5,7 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
 
-    joy_params = os.path.join(get_package_share_directory("bumperbot_controller"), "config","joy_stick.yaml" )
+    joy_params = os.path.join(get_package_share_directory("my_robot_bringup"), "config","joy_stick.yaml" )
 
     joy_node = Node(
         package="joy",
@@ -18,8 +18,7 @@ def generate_launch_description():
         package="teleop_twist_joy",
         executable="teleop_node",
         name= "teleop_node",
-        parameters=[joy_params],
-        remappings=[('/cmd_vel', '/turtle1/cmd_vel' )]
+        parameters=[joy_params]
     )
 
 

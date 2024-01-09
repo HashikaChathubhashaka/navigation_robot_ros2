@@ -13,6 +13,12 @@
   <exec_depend> robot_state_publisher </exec_depend>
   <exec_depend> gazebo_ros </exec_depend>
 
+<!-- This is add for sensor fusion. [to add the IMU sensor]-->
+
+  <exec_depend>robot_localization</exec_depend>
+
+<!--     -->
+
   <exec_depend> slam_toolbox </exec_depend>
 
   <exec_depend> nav2_bringup </exec_depend>

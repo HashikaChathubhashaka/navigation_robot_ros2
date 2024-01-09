@@ -15,14 +15,9 @@
     
     <xacro:include filename = "mobile_base_gazebo.xacro"/>
 
-        <xacro:include filename = "lider.xacro" />
-    
- 
+    <xacro:include filename = "lider.xacro" />
 
-
-   
-
-
+    <xacro:include filename="imu.xacro" />
 
 
 

@@ -1,3 +1,5 @@
+/home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//launch/joy_teleop.launch.py
+/home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//launch/local.launch.py
 /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//launch/localization_launch.py
 /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//launch/my_robot_gazebo.launch.xml
 /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//launch/navigation_launch.py
@@ -6,6 +8,9 @@
 /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//rviz/robot_config.rviz
 /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//worlds/simple room.world
 /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//worlds/test_world.world
+/home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//config/ekf.yaml
+/home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//config/joy_stick.yaml
+/home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup//config/nav2_params.yaml
 /home/hashika/ros_ws/install/my_robot_bringup/share/ament_index/resource_index/package_run_dependencies/my_robot_bringup
 /home/hashika/ros_ws/install/my_robot_bringup/share/ament_index/resource_index/parent_prefix_path/my_robot_bringup
 /home/hashika/ros_ws/install/my_robot_bringup/share/my_robot_bringup/environment/ament_prefix_path.sh

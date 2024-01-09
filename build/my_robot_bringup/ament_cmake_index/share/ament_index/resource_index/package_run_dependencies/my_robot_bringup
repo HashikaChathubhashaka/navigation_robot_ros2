@@ -1,1 +1,1 @@
-my_robot_description;robot_state_publisher;gazebo_ros;slam_toolbox;nav2_bringup;ament_lint_auto;ament_lint_common
+my_robot_description;robot_state_publisher;gazebo_ros;robot_localization;slam_toolbox;nav2_bringup;ament_lint_auto;ament_lint_common

@@ -1,5 +1,7 @@
 <launch>
     <!-- URDF path - just give easy name to call  -->
+
+
     <let name="urdf_path" 
             value="$(find-pkg-share my_robot_description)/urdf/two_wheel_robot.urdf.xacro" />
 
@@ -13,11 +15,13 @@
     </node>
 
  <!-- adding  launch files  -->
+
+
     <include file="$(find-pkg-share my_robot_bringup)/launch/localization_launch.py"  /> 
     <include file="$(find-pkg-share my_robot_bringup)/launch/navigation_launch.py"  /> 
 
- <!-- u can delete if u need to run them seperatly  -->
 
+ <!-- u can delete if u need to run them seperatly  -->
 
     <include file="$(find-pkg-share gazebo_ros)/launch/gazebo.launch.py" >
 
@@ -26,6 +30,10 @@
 
     <node pkg="gazebo_ros" exec="spawn_entity.py"
                 args="-topic robot_description -entity my_robot"  />
+
+
+<!-- launch file for adding sensor fusion-->
+        <include file="$(find-pkg-share my_robot_bringup)/launch/local.launch.py"  /> 
 
     <node pkg="rviz2" exec="rviz2"  output="screen"  
      args="-d $(var rviz_config_path)" />

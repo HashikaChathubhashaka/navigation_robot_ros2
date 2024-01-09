@@ -1,5 +1,6 @@
 /home/hashika/ros_ws/install/my_robot_description/share/my_robot_description//urdf/arm.xacro
 /home/hashika/ros_ws/install/my_robot_description/share/my_robot_description//urdf/camara.xacro
+/home/hashika/ros_ws/install/my_robot_description/share/my_robot_description//urdf/imu.xacro
 /home/hashika/ros_ws/install/my_robot_description/share/my_robot_description//urdf/inertia.xacro
 /home/hashika/ros_ws/install/my_robot_description/share/my_robot_description//urdf/lider.xacro
 /home/hashika/ros_ws/install/my_robot_description/share/my_robot_description//urdf/material.xacro
