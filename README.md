@@ -16,8 +16,8 @@ Before you can run this simulation, make sure you have the following installed:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/your-repository.git
-    cd your-repository
+    git clone https://github.com/HashikaChathubhashaka/navigation_robot_ros2.git
+    cd navigation_robot_ros2
     ```
 
 2. Build the workspace:
